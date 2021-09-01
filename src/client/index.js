@@ -6,13 +6,16 @@ import './styles/header.scss'
 
 import { checkForName } from './js/nameChecker'
 import { handleSubmit } from './js/formHandler'
+import { validateURL } from './js/validateURL'
 
 console.log(checkForName);
 console.log(handleSubmit);
+console.log(validateURL);
 
 export {
     checkForName,
-    handleSubmit
+    handleSubmit,
+    validateURL
 }
 
 // console.log(checkForName);
