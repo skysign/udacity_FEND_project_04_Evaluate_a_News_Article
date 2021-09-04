@@ -17,7 +17,3 @@ export {
     handleSubmit,
     validateURL
 }
-
-// console.log(checkForName);
-//
-// alert("I EXIST")

@@ -22,12 +22,12 @@ function handleSubmit(event) {
 
         document.getElementById('agreement').innerHTML = `agreement: ${res.agreement}`;
         document.getElementById("confidence").innerHTML = `confidence: ${res.confidence}`;
-        document.getElementById("polarity").innerHTML = `polarity: ${res.subjectivity}`;
+        document.getElementById("polarity").innerHTML = `polarity: ${res.polarity}`;
         document.getElementById("subjectivity").innerHTML = `subjectivity: ${res.subjectivity}`;
     })
 }
 
-const doPost = async (url = "", data = {}) => {
+let doPost = async function(url = "", data = {}) {
     console.log('doPost:', data);
     let res = await fetch(url, {
         method: 'POST',

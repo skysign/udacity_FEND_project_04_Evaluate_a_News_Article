@@ -1,17 +1,6 @@
 const dotenv = require('dotenv');
 dotenv.config();
 var path = require('path');
-
-// import('cross-fetch');
-// global.fetch = import("node-fetch");
-// global.fetch = import('node-fetch').default;
-// global.fetch = import("node-fetch");
-// global.fetch = import('node-fetch').default;
-// let nodeFetch = import('node-fetch');
-
-// if (typeof nodeFetch !== 'function')
-//     nodeFetch = nodeFetch.default;
-
 const fetch = require('node-fetch');
 const express = require('express');
 const mockAPIResponse = require('./mockAPI.js');
@@ -22,7 +11,6 @@ app.use(cors());
 app.use(express.static('dist'))
 
 app.get('/', function (req, res) {
-    // res.sendFile('dist/index.html')
     res.sendFile('dist/index.html')
 })
 
@@ -58,11 +46,6 @@ app.post('/nlp', async function (req, res) {
             res.send(mcRes)
             console.log(`MC res sent`)
         })
-        // const resOfAPI = fetch(urlAPI);
-        // const mcRes = resOfAPI.json()
-        // console.log(`MC res`)
-        // console.log(mcRes)
-        // res.send(mcRes)
     });
 })
 
